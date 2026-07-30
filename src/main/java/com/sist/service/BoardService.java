@@ -11,4 +11,9 @@ public interface BoardService {
 	public int boardRowCount();
 	
 	public void boardInsert(BoardVO vo);
+	
+	public BoardVO boardDetailData(int no);
+	
+	public void boardReplyInsert(int pno,BoardVO vo);
+
 }
