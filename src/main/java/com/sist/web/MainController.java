@@ -61,12 +61,7 @@ public class MainController {
 		
 		model.addAttribute("cList", cList);
 		model.addAttribute("size", cList.size());
-		/*
-		 *  ���尴ü�� ���ó 
-		 *  	request/response -> cookie / fileupload
-		 *  	session => ���� / ȸ�� ����
-		 * 한글 
-		 */
+
 		model.addAttribute("list", list);
 		model.addAttribute("curpage", curpage);
 		model.addAttribute("totalpage", totalpage);
