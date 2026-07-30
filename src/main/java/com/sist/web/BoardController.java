@@ -82,4 +82,20 @@ public class BoardController {
 		bService.boardReplyInsert(pno, vo);
 		return "redirect:../board/list.do";
 	}
+	
+	@GetMapping("board/update.do")
+	public String board_update(int no,Model model)
+	{
+		BoardVO vo = bService.boardDetailData(no);
+		model.addAttribute("vo", vo);
+		model.addAttribute("main_jsp", "../board/update.jsp");
+		return "main/main";
+	}
+	
+	@PostMapping("board/update_ok.do")
+	public String board_update_ok(BoardVO vo)
+	{
+		bService.boardUpdate(vo);
+		return "redirect:../board/list.do";
+	}
 }

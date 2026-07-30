@@ -89,4 +89,14 @@ public class BoardServiceImpl implements BoardService{
 		
 	}
 
+	@Override
+	public void boardUpdate(BoardVO vo) {
+		BoardVO tvo = mapper.boardDetailData(vo.getNo());
+		if(tvo.getPwd().equals(vo.getPwd()))
+		{
+			mapper.boardUpdate(vo);
+		}
+
+	}
+
 }

@@ -28,14 +28,14 @@ public interface BoardMapper {
 			+ "hit = hit+1 "
 			+ "WHERE no=#{no}")
 	public void boardHitIncrement(int no);
-	@Select("SELECT no,name,subject,content,TO_CHAR(regdate,'yyyy-mm-dd') as dbday,hit "
+	@Select("SELECT no,pwd,name,subject,content,TO_CHAR(regdate,'yyyy-mm-dd') as dbday,hit "
 			+ "FROM springreplyboard "
 			+ "WHERE no=#{no}")
 	public BoardVO boardDetailData(int no);
 	
 	//답변하기 ===> Transaction
 	//1. 상위 데이터를 읽기
-	@Select("SELECT group_id,group_step,group_tab "
+	@Select("SELECT group_id,group_step,group_tab,pwd "
 			+ "FROM springreplyboard "
 			+ "WHERE no=#{no}")
 	public BoardVO boardParentInfoData(int no);
@@ -62,4 +62,8 @@ public interface BoardMapper {
 	 * root : 어느 게시물의 답변인지
 	 * depth : 답변이 몇개인지
 	 */
+	
+	@Update("UPDATE springreplyboard SET name=#{name},subject=#{subject},content=#{content} "
+			+ "WHERE no=#{no}")
+	public void boardUpdate(BoardVO vo);
 }
