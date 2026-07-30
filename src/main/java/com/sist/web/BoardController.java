@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.sist.service.BoardService;
 
 import lombok.RequiredArgsConstructor;
-import oracle.jdbc.proxy.annotation.GetProxy;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -94,9 +94,10 @@ public class BoardController {
 	}
 	
 	@PostMapping("board/update_ok.do")
-	public String board_update_ok(BoardVO vo)
+	public String board_update_ok(BoardVO vo,RedirectAttributes ra)
 	{
 		bService.boardUpdate(vo);
-		return "redirect:../board/list.do";
+		ra.addAttribute("no",vo.getNo());
+		return "redirect:../board/detail.do";
 	}
 }
