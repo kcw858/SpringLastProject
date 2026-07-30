@@ -25,6 +25,7 @@
 						<th width="15%" class="text-center success">이름</th>
 						<td width="85%">
 							<input type="text" name="name" size=20 class="input-sm" value="${vo.name}" required>
+							<input type="hidden" name="no" value="${no}">
 						</td>
 					</tr>
 					<tr>

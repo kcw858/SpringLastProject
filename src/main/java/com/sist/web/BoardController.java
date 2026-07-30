@@ -88,6 +88,7 @@ public class BoardController {
 	{
 		BoardVO vo = bService.boardDetailData(no);
 		model.addAttribute("vo", vo);
+		model.addAttribute("no", no);
 		model.addAttribute("main_jsp", "../board/update.jsp");
 		return "main/main";
 	}
