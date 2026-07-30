@@ -23,7 +23,7 @@
 				<table class="table">
 					<tr>
 						<td>
-							<a href="../board/list.do" class="btn btn-sm btn-primary">새글</a>
+							<a href="../board/insert.do" class="btn btn-sm btn-primary">새글</a>
 						</td>
 					</tr>
 				</table>
