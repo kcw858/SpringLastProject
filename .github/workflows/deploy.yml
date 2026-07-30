@@ -34,8 +34,9 @@ jobs:
           env:
             RUNNER_TRACKING_ID: ""
           run: |
-            nohup /home/sist/apache-tomcat-9.0.120/bin/startup.sh
-            sleep 5
+             nohup /home/sist/apache-tomcat-9.0.120/bin/startup.sh
+             sleep 5
+             ps -ef | grep tomcat
 
 
 
