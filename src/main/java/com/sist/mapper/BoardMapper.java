@@ -43,7 +43,7 @@ public interface BoardMapper {
 	@Update("UPDATE springreplyboard SET "
 			+ "group_step = group_step+1 "
 			+ "WHERE group_id=#{group_id} AND group_step > #{group_step}")
-	public void boardStepIncrement(@Param("gourp_id") int group_id,@Param("group_step") int group_step);
+	public void boardStepIncrement(@Param("group_id") int group_id,@Param("group_step") int group_step);
 	//3. INSERT
 	@Insert("INSERT INTO springreplyboard(no,name,subject,content,pwd,group_id,group_step,group_tab,root,depth) "
 			+ "VALUES(srb_no_seq.nextval,#{name},#{subject},#{content},#{pwd},"
