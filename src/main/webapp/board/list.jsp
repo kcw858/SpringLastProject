@@ -20,6 +20,13 @@
 		<div class="container">
 			<div class="row">
 				<h3>묻고 답하기</h3>
+				<table class="table">
+					<tr>
+						<td>
+							<a href="../board/list.do" class="btn btn-sm btn-primary">새글</a>
+						</td>
+					</tr>
+				</table>
 				<table class="table table-hover">
 					<tr class="success">
 						<th width="10%" class="text-center">번호</th>

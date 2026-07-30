@@ -52,6 +52,7 @@ public class BoardController {
 	@PostMapping("board/insert_ok.do")
 	public String board_insert_ok(BoardVO vo)
 	{
+		bService.boardInsert(vo);
 		return "redirect:../board/list.do";
 	}
 }
