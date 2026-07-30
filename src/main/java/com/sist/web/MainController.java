@@ -45,7 +45,7 @@ public class MainController {
 		
 		if(cookies != null)
 		{
-			//µÚ¿¡¼­ ºÎÅÍ ÀÐ¾î¼­ ÃÖ½Å¼øÀ¸·Î
+			//ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾î¼­ ï¿½Ö½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½
 			for(int i = cookies.length-1; i >=0; i--)
 			{
 				if(cookies[i].getName().startsWith("food_"))
@@ -62,10 +62,10 @@ public class MainController {
 		model.addAttribute("cList", cList);
 		model.addAttribute("size", cList.size());
 		/*
-		 *  ³»Àå°´Ã¼ÀÇ »ç¿ëÃ³ 
+		 *  ï¿½ï¿½ï¿½å°´Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Ã³ 
 		 *  	request/response -> cookie / fileupload
-		 *  	session => º¸¶õ / È¸¸ °¡ÀÔ
-		 *  
+		 *  	session => ï¿½ï¿½ï¿½ï¿½ / È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		 * í•œê¸€ 
 		 */
 		model.addAttribute("list", list);
 		model.addAttribute("curpage", curpage);
