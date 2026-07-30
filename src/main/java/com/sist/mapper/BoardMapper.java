@@ -11,7 +11,7 @@ import com.sist.vo.*;
 public interface BoardMapper {
 	@Select("SELECT no,subject,name,TO_CHAR(regdate,'yyyy-mm-dd') as dbday,hit,group_tab "
 			+ "FROM springreplyboard "
-			+ "ORDER BY no,group_id DESC,group_step ASC "
+			+ "ORDER BY group_id DESC,group_step ASC "
 			+ "OFFSET #{start} ROWS FETCH NEXT 10 ROWS ONLY")
 	public List<BoardVO> boardListData(int start);
 	
