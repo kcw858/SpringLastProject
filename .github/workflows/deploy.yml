@@ -31,6 +31,8 @@ jobs:
           run: |
             cp target/*.war /home/sist/apache-tomcat-9.0.120/webapps/SpringLastProject.war
         - name: Tomcat Start
+          env:
+            RUNNER_TRACKING_ID: ""
           run: |
             nohup /home/sist/apache-tomcat-9.0.120/bin/startup.sh
             sleep 5
