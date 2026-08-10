@@ -1,5 +1,5 @@
 # ⚙️ 환경
-+ Spring 5.1.5
++ Sts 3.9.18
 + Tomcat 9
 + Java 11
 + git Action
