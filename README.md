@@ -1,3 +1,20 @@
+## CI / CD => DevOps (Developer + Operation)
+ - 개발 + 운영
+
+## CI -> 코드가 정상적으로 통합 
+	=> 자동 검증
+	=> git push (commit+push) / merge 시 통합
+	=> 코드 체크 / 빌드 / 테스트 / 오류검증
+	=> deploy.yml의  name, jenkins는 stage
+	=> 정상적 수행 => 서버로 전송
+
+## CD -> deplyment
+	=> 서버에 배포
+	=> 시점: CI가 완성된 경우
+	=> jar(war) / docker 이미지
+	=> 서버 재실행
+	=> 자동화 
+
 # ⚙️ 환경
 + Sts 3.9.18
 + Tomcat 9
